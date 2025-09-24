@@ -1,32 +1,27 @@
-/**
- * Vamos a crear dos montones de tarjetas, uno de películas y otro de recursos relacionados:
- * 
- */
-const NMOVIES = 5
-const NELEMENTSPMOVIE = 3
-const getMoviesDeck = () => {
-    let movieDeck = []
-    for(let i = 1; i <= NMOVIES; i++) {
-        movieDeck.push("0"+i+"M")
-    }
-    //Barajamos con un método dela librería Underscore. Esta librería ofrece muchas funciones,
-    //en este caso uso shuffle que recibe un arrayy lo devuelve de forma aleatoria
-    movieDeck = _.shuffle(movieDeck)
-    return movieDeck;
-}
+const NMOVIES = 5;
+const NELEMENTSPMOVIE = 3;
 
 const getElementsDeck = () => {
-    let elementDeck = []
+    let elementDeck = [];
     for(let i = 1; i <= NMOVIES; i++) {
-        for(let j = 1; j <= NELEMENTSPMOVIE; j++) {
-            elementDeck.push("0"+i+"C"+j)
-        } 
+        for(let j = 0; j < NELEMENTSPMOVIE; j++) {
+            elementDeck.push(`0${i}C${j}`);
+        }
     }
-    //Barajamos
-    elementDeck = _.shuffle(elementDeck)
+    elementDeck = _.shuffle(elementDeck);
     return elementDeck;
-}
+};
 
-let movieDeck = getMoviesDeck()
-let elementDeck = getElementsDeck()
+let elementDeck = getElementsDeck();
 
+document.getElementById('boton-adivina').addEventListener('click', () => {
+    if (elementDeck.length === 0) return;
+    const element = elementDeck.pop();
+    const divElement = document.createElement('div');
+    divElement.classList.add('elemento');
+    const imgElement = document.createElement('img');
+    imgElement.src = `assets/characters/${element}.jpg`;
+    imgElement.classList.add('recurso');
+    divElement.appendChild(imgElement);
+    document.getElementById('elementos-pelicula').appendChild(divElement);
+});
