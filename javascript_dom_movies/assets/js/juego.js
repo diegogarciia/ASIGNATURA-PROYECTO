@@ -30,3 +30,18 @@ const getElementsDeck = () => {
 let movieDeck = getMoviesDeck()
 let elementDeck = getElementsDeck()
 
+function reiniciarJuego() {
+    movieDeck = getMoviesDeck();
+    elementDeck = getElementsDeck();
+
+    // Actualizar carátula de película
+    const peliculaCaratula = document.querySelector('#pelicula-caratula img');
+    peliculaCaratula.src = `assets/movies/${movieDeck[0]}.jpg`;
+
+    // Vaciar elementos de la película
+    const elementosDiv = document.getElementById('elementos-pelicula');
+    elementosDiv.innerHTML = '';
+}
+
+// Escuchar el botón "Nuevo Juego"
+document.getElementById('boton-nuevo-juego').addEventListener('click', reiniciarJuego);
