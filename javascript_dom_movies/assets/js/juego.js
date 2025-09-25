@@ -42,6 +42,23 @@ function initDragAndDrop() {
             e.dataTransfer.setData('text/plain', img.id);
         });
 
+botón-mostrar-película
+let currentMovieIndex = 0;
+
+function mostrarSiguientePelicula() {
+    currentMovieIndex = (currentMovieIndex + 1) % movieDeck.length;
+    const movieId = movieDeck[currentMovieIndex];
+    const caratulaImg = document.querySelector('#pelicula-caratula img');
+    caratulaImg.src = `assets/movies/${movieId}.jpg`;
+}
+
+document.getElementById('boton-mostrar-pelicula').addEventListener('click', mostrarSiguientePelicula);
+
+document.addEventListener('DOMContentLoaded', () => {
+    const caratulaImg = document.querySelector('#pelicula-caratula img');
+    caratulaImg.src = `assets/movies/${movieDeck[currentMovieIndex]}.jpg`;
+});
+=======
         img.addEventListener('dragend', () => {
             img.classList.remove('dragging');
         });
