@@ -52,6 +52,22 @@ function initDragAndDrop() {
             e.preventDefault();
         });
 
+botón-nuevo-juego
+function reiniciarJuego() {
+    movieDeck = getMoviesDeck();
+    elementDeck = getElementsDeck();
+
+    // Actualizar carátula de película
+    const peliculaCaratula = document.querySelector('#pelicula-caratula img');
+    peliculaCaratula.src = `assets/movies/${movieDeck[0]}.jpg`;
+
+    // Vaciar elementos de la película
+    const elementosDiv = document.getElementById('elementos-pelicula');
+    elementosDiv.innerHTML = '';
+}
+
+// Escuchar el botón "Nuevo Juego"
+document.getElementById('boton-nuevo-juego').addEventListener('click', reiniciarJuego);
         slot.addEventListener('drop', (e) => {
             e.preventDefault();
             const personajeId = e.dataTransfer.getData('text/plain');
