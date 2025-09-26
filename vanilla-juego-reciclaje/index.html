@@ -8,7 +8,38 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-  
+    <header class="titulo">
+        Juego De Reciclaje
+    </header>
 
+    <div class="row mt-2">
+        <div class="col text-center">
+            <button class="btn btn-primary" id="boton-nuevo-juego">Nuevo Juego</button>
+            <button class="btn btn-primary" id="boton-nuevo-elemento-reciclar">Nuevo elemento para reciclar</button>
+        </div>
+    </div>
+
+    <div class="row container">
+        <div class="col">
+            <h1>Contenedores - <small>¿Qué sabes de reciclaje?</small></h1>
+            <div id="contenedores">
+                <div id="slots-contenedores" class="d-flex justify-content-center mt-3">
+                    <div class="slot-contenedores mx-2" id="slot-0"></div>
+                    <div class="slot-contenedores mx-2" id="slot-1"></div>
+                    <div class="slot-contenedores mx-2" id="slot-2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row container mt-2">
+        <div class="col">
+            <h1>Elementos para reciclar</h1>
+            <div id="elementos-para-reciclar">
+                
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/underscore-umd.js"></script>
+    <script src="assets/js/juego.js"></script>
 </body>
 </html>

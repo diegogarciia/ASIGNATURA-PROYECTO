@@ -1,0 +1,29 @@
+html, body {
+    margin: 0px;
+    background-color: gray;
+    color: white;
+}
+
+.titulo {
+    text-align: center;
+    background-color: green;
+    color: white;
+    padding: 20px;
+    font-size: 25px;
+}
+
+#elementos-para-reciclar {
+    height: 320px;
+}
+
+.slot-contenedores {
+    width: 200px;
+    height: 310px;
+    border: 2px dashed #aaa;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8f9fa;
+    margin: 0 10px;
+}
