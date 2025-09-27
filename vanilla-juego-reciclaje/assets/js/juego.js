@@ -174,3 +174,5 @@ document.getElementById('boton-nuevo-juego').addEventListener('click', () => {
         slot.style.backgroundColor = "white"; // fondo blanco al reiniciar
     });
 });
+=======
+}
