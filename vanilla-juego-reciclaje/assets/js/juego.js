@@ -153,3 +153,26 @@ function createImageElement(element) {
 
   return divElement;
 }
+
+// --- Listeners y funcionalidad del botón Nuevo juego ---
+document.getElementById('boton-nuevo-juego').addEventListener('click', () => {
+    // Reiniciar mazo
+    elementDeck = getElementsDeck();
+
+    // Reiniciar puntos
+    score = 0;
+    document.getElementById('puntos').innerText = score;
+
+    // Vaciar los elementos en el área de reciclaje
+    const elementosContainer = document.getElementById('elementos-para-reciclar');
+    elementosContainer.innerHTML = "";
+
+    // Resetear estilos de los contenedores
+    const slots = document.querySelectorAll('.slot-contenedores');
+    slots.forEach(slot => {
+        slot.style.border = "none";
+        slot.style.backgroundColor = "white"; // fondo blanco al reiniciar
+    });
+});
+=======
+}
