@@ -1,0 +1,55 @@
+html, body {
+    margin: 0px;
+    background-color: gray;
+    color: white;
+}
+
+.titulo {
+    text-align: center;
+    background-color: green;
+    color: white;
+    padding: 20px;
+    font-size: 25px;
+}
+
+#elementos-para-reciclar {
+    height: 320px;
+}
+
+.elemento {
+    position: relative;
+    background-color: black;
+    width: 210px;
+    height: 310px;
+    left: 100px;
+    margin-left: -35px;
+    float:left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-color: azure;
+    border-width: 2px;
+    border-radius: 10px;
+    border-style: solid;
+}
+
+.recurso {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain; 
+    display: block;
+}
+
+.slot-contenedores {
+    width: 200px;
+    height: 310px;
+    border: 2px dashed #aaa;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8f9fa;
+    margin: 0 10px;
+}
